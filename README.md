@@ -41,12 +41,7 @@ Classes: Hardhat, Mask, NO-Hardhat, NO-Mask, NO-Safety Vest, Person, Safety Cone
 - Model Accuracy (Validation Set Metrics)
 These are the overall final evaluation metrics obtained after training on the 114 validation images:
 
-Metric	Score
-mAP50	0.7634 (76.3%)
-mAP50-95	0.4432 (44.3%)
-Precision	0.8979 (89.8%)
-Recall	0.6582 (65.8%)
-
+<img width="281" height="165" alt="image" src="https://github.com/user-attachments/assets/7d256c55-8c4b-4eda-9762-63f4a137db20" />
 
 ## Run locally
 
