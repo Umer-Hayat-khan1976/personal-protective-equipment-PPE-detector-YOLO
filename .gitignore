@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+runs/
+datasets/
+*.zip
+.DS_Store
+# keep the trained weights in the repo
+!models/best.pt
