@@ -2,6 +2,9 @@
 
 Object detection web app for construction-site safety. A YOLOv8 model, fine-tuned on a PPE dataset, locates workers and checks for hard hats, masks and safety vests. Built with Ultralytics and Streamlit.
 
+# Live app Link:
+https://personal-protective-equipment-ppe-detector-yolo-2026.streamlit.app/
+
 ## Features
 
 - Upload an image (JPG, PNG, WEBP) or choose a bundled sample
@@ -35,24 +38,24 @@ Classes: Hardhat, Mask, NO-Hardhat, NO-Mask, NO-Safety Vest, Person, Safety Cone
 
 - Base: `yolov8n.pt` (COCO pretrained)
 - Fine-tuning: 30 epochs, image size 640, batch 16
-- Results: see the training notebook for the full epoch log and final mAP50
+- Model Accuracy (Validation Set Metrics)
+These are the overall final evaluation metrics obtained after training on the 114 validation images:
+
+Metric	Score
+mAP50	0.7634 (76.3%)
+mAP50-95	0.4432 (44.3%)
+Precision	0.8979 (89.8%)
+Recall	0.6582 (65.8%)
+
 
 ## Run locally
 
-```bash
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-# place the trained weights at models/best.pt
-streamlit run app.py
-```
+python -m streamlit run app.py
+
 
 The app opens at http://localhost:8501.
 
-## Deploy on Streamlit Community Cloud
 
-1. Push this repository to GitHub (public), including `models/best.pt`.
-2. Sign in at https://share.streamlit.io with GitHub.
-3. Select Create app, choose the repository, branch `main`, main file `app.py`.
-4. Under Advanced settings, select Python 3.11.
-5. Deploy. The first build takes several minutes.
